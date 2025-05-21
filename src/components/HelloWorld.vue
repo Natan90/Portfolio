@@ -1,21 +1,26 @@
 <script setup>
+import Terminal from "@/components/Terminal.vue";
+import MenuItems from "@/components/menuItems.vue";
+
 defineProps({
   msg: {
     type: String,
     required: true,
   },
 })
+
+
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
-  </div>
+<main>
+  <Terminal>
+
+  </Terminal>
+  <menuItems>
+
+  </menuItems>
+</main>
 </template>
 
 <style scoped>
@@ -28,11 +33,17 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
+  font-family: monospace;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s steps(1) infinite;
 }
 
-.greetings h1,
-.greetings h3 {
-  text-align: center;
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 @media (min-width: 1024px) {
