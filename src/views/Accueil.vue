@@ -1,6 +1,6 @@
 <script setup>
 import Terminal from "@/components/Terminal.vue";
-import MenuItems from "@/components/menuItems.vue";
+import NavBarre from "@/components/navBarre.vue";
 
 defineProps({
   msg: {
@@ -13,14 +13,10 @@ defineProps({
 </script>
 
 <template>
-<main>
-  <Terminal>
-
-  </Terminal>
-  <menuItems>
-
-  </menuItems>
-</main>
+  <main>
+    <NavBarre />
+    <Terminal />
+  </main>
 </template>
 
 <style scoped>
@@ -50,6 +46,25 @@ h3 {
   .greetings h1,
   .greetings h3 {
     text-align: left;
+  }
+}
+header {
+  line-height: 1.5;
+  display: flex;
+  place-items: center;
+
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
   }
 }
 </style>
