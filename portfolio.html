@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio BUT2 — Natan Bouche</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Natan <span>Bouche</span></div>
+  <ul class="nav-links">
+    <li><a href="#presentation">Présentation</a></li>
+    <li><a href="#entreprise">Entreprise</a></li>
+    <li><a href="#stage">Stage</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="presentation">
+  <div class="hero-badge">Portfolio BUT Informatique · Stage S4 · 2026</div>
+  <h1 class="hero-title">Natan<br><em>Bouche</em></h1>
+  <div class="hero-meta">
+    <span class="hero-meta-item">Étudiant·e BUT Informatique — 2ᵉ année</span>
+    <span class="hero-meta-item">EmmeneTonChien.com · Montpellier</span>
+    <span class="hero-meta-item">10 avril – 12 juin 2026</span>
+  </div>
+  <p class="lead">
+    Bienvenue sur mon portfolio de stage de 2ᵉ année en BUT Informatique. Durant 9 semaines chez
+    <strong style="color:var(--text); font-weight:500;">EmmeneTonChien.com</strong>, j'ai conçu et développé
+    de A à Z le mini-site sécurisé du <em style="color:var(--accent); font-style:normal;">Pass Wouafer's</em> —
+    un espace membre premium intégrant authentification, paiement Stripe et gestion d'abonnements.
+  </p>
+  <div class="hero-actions">
+    <a href="#stage" class="btn btn-primary">Voir le projet ↓</a>
+    <a href="#competences" class="btn btn-secondary">Compétences BUT</a>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="entreprise">
+  <div class="section-tag">Entreprise</div>
+  <h2 class="section-title">EmmeneTonChien<br><em style="color:var(--accent)">.com</em></h2>
+  <p class="lead">
+    Plateforme de tourisme dog-friendly qui aide les propriétaires de chiens à trouver des hébergements,
+    restaurants et activités qui accueillent vraiment les animaux. Plus qu'un répertoire : un véritable
+    guide de voyage pensé pour les familles avec chien.
+  </p>
+
+  <div class="grid-2">
+    <div class="info-card">
+      <div class="info-card-label">Identité</div>
+      <h3>EmmeneTonChien.com</h3>
+      <ul>
+        <li>Secteur : Tourisme dog-friendly / Édition web</li>
+        <li>Taille : ~10 salariés et stagiaires</li>
+        <li>Lieu : Montpellier</li>
+        <li>Site : <a href="https://emmenetonchien.com" style="color:var(--accent); text-decoration:none;">emmenetonchien.com</a></li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <div class="info-card-label">Encadrement</div>
+      <h3>Équipe & moyens</h3>
+      <ul>
+        <li>Tutrice : Sophie Morche (Directrice)</li>
+        <li>Contact fonctionnel : Léa (marketing / produit)</li>
+        <li>Stack : WordPress, Elementor, Stripe, FTP</li>
+        <li>Durée : 9 semaines (avril – juin 2026)</li>
+      </ul>
+    </div>
+    <div class="info-card col-span-2">
+      <div class="info-card-label">Contexte & problématique</div>
+      <h3>Le Pass Wouafer's : d'une page libre à un espace membre sécurisé</h3>
+      <p>
+        Le Pass Wouafer's est un abonnement annuel donnant accès à plus de 30 codes de réduction exclusifs
+        (hébergements, matériel, activités). Problème : la page listant les codes était librement accessible
+        via son URL — n'importe qui pouvait y accéder sans payer. Cette faille limitait fortement la valeur
+        perçue du produit et freinait les ventes. L'enjeu du stage était de transformer cet espace en un
+        véritable service membres sécurisé, lié à un abonnement Stripe actif, avec création automatique de
+        compte, gestion du profil et blocage en cas d'abonnement expiré.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="stage">
+  <div class="section-tag">Stage</div>
+  <h2 class="section-title">Projet Pass<br><em style="color:var(--accent)">Wouafer's</em></h2>
+  <p class="lead">
+    Développement complet d'un mini-site WordPress sécurisé : authentification, intégration Stripe par webhook,
+    gestion des abonnements en temps réel, profil utilisateur et interface d'administration no-code.
+  </p>
+
+  <div class="domaine-grid">
+
+    <div class="domaine-card">
+      <div class="domaine-top">
+        <div><h3>Plugin WordPress sur-mesure</h3></div>
+        <div class="domaine-icon">🔌</div>
+      </div>
+      <ul class="domaine-tasks">
+        <li>Développement d'un plugin PHP from scratch</li>
+        <li>Architecture modulaire multi-fichiers (refactorisation semaine 8)</li>
+        <li>Whitelist de pages publiques configurable en admin</li>
+        <li>Interface d'administration interne pour la gestion des accès</li>
+      </ul>
+      <div class="tech-badges">
+        <span class="tech-badge">PHP</span>
+        <span class="tech-badge">WordPress</span>
+        <span class="tech-badge">WP Admin API</span>
+      </div>
+    </div>
+
+    <div class="domaine-card">
+      <div class="domaine-top">
+        <div><h3>Intégration Stripe & webhooks</h3></div>
+        <div class="domaine-icon">💳</div>
+      </div>
+      <ul class="domaine-tasks">
+        <li>Réception et traitement des webhooks Stripe</li>
+        <li>Création automatique d'utilisateur après paiement</li>
+        <li>Vérification du statut d'abonnement en temps réel via API</li>
+        <li>Gestion des cas limites (résiliation, renouvellement échoué)</li>
+        <li>Envoi du prénom / nom depuis le webhook vers WordPress</li>
+      </ul>
+      <div class="tech-badges">
+        <span class="tech-badge">Stripe API</span>
+        <span class="tech-badge">Webhooks</span>
+        <span class="tech-badge">PHP</span>
+      </div>
+    </div>
+
+    <div class="domaine-card">
+      <div class="domaine-top">
+        <div><h3>Authentification & accès</h3></div>
+        <div class="domaine-icon">🔐</div>
+      </div>
+      <ul class="domaine-tasks">
+        <li>Formulaire de connexion WordPress personnalisé</li>
+        <li>Email automatique avec lien de définition de mot de passe</li>
+        <li>Blocage de connexion si abonnement inactif</li>
+        <li>Redirection vers page de régularisation</li>
+        <li>Protection des URLs et pages sensibles (noindex/nofollow)</li>
+      </ul>
+      <div class="tech-badges">
+        <span class="tech-badge">WP Auth</span>
+        <span class="tech-badge">Sessions PHP</span>
+        <span class="tech-badge">.htaccess</span>
+      </div>
+    </div>
+
+    <div class="domaine-card">
+      <div class="domaine-top">
+        <div><h3>Profil & données utilisateur</h3></div>
+        <div class="domaine-icon">👤</div>
+      </div>
+      <ul class="domaine-tasks">
+        <li>Espace "Mon compte" avec profil modifiable</li>
+        <li>Affichage de l'état et des caractéristiques de l'abonnement</li>
+        <li>Historique des abonnements et des prélèvements</li>
+        <li>Données structurées (nom du chien, race, taille…)</li>
+        <li>Blocage de modification de l'email pour éviter les incohérences</li>
+      </ul>
+      <div class="tech-badges">
+        <span class="tech-badge">WP User Meta</span>
+        <span class="tech-badge">MySQL</span>
+        <span class="tech-badge">RGPD</span>
+      </div>
+    </div>
+
+    <div class="domaine-card">
+      <div class="domaine-top">
+        <div><h3>Interface & Elementor</h3></div>
+        <div class="domaine-icon">🎨</div>
+      </div>
+      <ul class="domaine-tasks">
+        <li>Personnalisation complète des formulaires et boutons</li>
+        <li>Widgets Elementor enrichis (contrôle CSS no-code)</li>
+        <li>Mode prévisualisation des shortcodes en admin</li>
+        <li>Correction d'un bug de chargement infini sur pages Elementor</li>
+      </ul>
+      <div class="tech-badges">
+        <span class="tech-badge">Elementor</span>
+        <span class="tech-badge">CSS</span>
+        <span class="tech-badge">Shortcodes</span>
+      </div>
+    </div>
+
+    <div class="domaine-card">
+      <div class="domaine-top">
+        <div><h3>Collecte de données & API</h3></div>
+        <div class="domaine-icon">📡</div>
+      </div>
+      <ul class="domaine-tasks">
+        <li>Appels d'API sur des sites partenaires pour collecter des contacts</li>
+        <li>Normalisation et qualification des données récupérées</li>
+        <li>Suppression des doublons, structuration des champs</li>
+      </ul>
+      <div class="tech-badges">
+        <span class="tech-badge">REST API</span>
+        <span class="tech-badge">PHP / cURL</span>
+        <span class="tech-badge">CSV</span>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:600; margin-top:3.5rem; margin-bottom:0.25rem;">Déroulement du stage</h3>
+  <p style="font-size:13px; color:var(--text2); margin-bottom:0;">8 semaines · 10 avril – 12 juin 2026</p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 1</div>
+      <div class="timeline-title">Découverte & prise en main</div>
+      <div class="timeline-desc">Présentation de l'équipe, de l'écosystème EmmeneTonChien.com, lecture du cahier des charges du Pass Wouafer's. Installation du poste de travail.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 2</div>
+      <div class="timeline-title">Mise en place de l'intégration Stripe → WordPress</div>
+      <div class="timeline-desc">Configuration des webhooks, résolution du blocage htaccess, développement du formulaire de connexion et de l'envoi automatique du lien de mot de passe.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 3</div>
+      <div class="timeline-title">Fluidification du parcours & collecte de données</div>
+      <div class="timeline-desc">Parcours de finalisation immédiate post-paiement, collecte de contacts via API partenaires, premiers tests de blocage des abonnements inactifs.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 4</div>
+      <div class="timeline-title">Gestion des abonnements & profil utilisateur</div>
+      <div class="timeline-desc">API Stripe pour vérification en temps réel, redirection automatique, audit complet, correction de bugs, section profil utilisateur.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 5</div>
+      <div class="timeline-title">Transmission des données & UX</div>
+      <div class="timeline-desc">Envoi du prénom/nom via webhook, affichage et modification dans le profil, correction du bug de chargement infini, charte graphique des formulaires.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 6</div>
+      <div class="timeline-title">Cas limites & historique de compte</div>
+      <div class="timeline-desc">Listing des cas d'erreur (résiliation, double abonnement), création de l'historique des prélèvements, réunion de cadrage avec Léa.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 7</div>
+      <div class="timeline-title">Harmonisation & SEO</div>
+      <div class="timeline-desc">Finalisation des formulaires Elementor, passage en noindex/nofollow des pages sensibles, tests de compatibilité de plugins complémentaires.</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-week">Semaine 8</div>
+      <div class="timeline-title">Démonstration, refactorisation & admin</div>
+      <div class="timeline-desc">Présentation complète à Sophie, refactorisation du plugin en modules, whitelist avec interface admin, mode prévisualisation des shortcodes.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section id="competences">
+  <div class="section-tag">Référentiel BUT Informatique</div>
+  <h2 class="section-title">Compétences<br><em style="color:var(--accent)">développées</em></h2>
+  <p class="lead">
+    Mise en rapport des savoir-faire acquis lors du stage avec les compétences du référentiel BUT Informatique.
+    Chaque apprentissage critique (AC) est illustré par des réalisations concrètes du projet Pass Wouafer's.
+  </p>
+
+  <div class="competences-grid">
+
+    <div class="comp-card open" id="comp1">
+      <div class="comp-card-header" onclick="toggleComp('comp1')">
+        <div class="comp-number">1</div>
+        <h3>Réaliser un développement d'application</h3>
+        <svg class="comp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="comp-body">
+        <div class="ac-item">
+          <span class="ac-tag">AC1</span>
+          <div class="ac-content">
+            <h4>Choisir et implémenter les architectures adaptées</h4>
+            <p>
+              J'ai conçu l'architecture du plugin WordPress from scratch : séparation en modules (webhook, auth, profil, admin),
+              pattern whitelist pour le contrôle d'accès, et intégration via les hooks WordPress plutôt que par modification du core.
+              Ce choix garantit la maintenabilité et la compatibilité avec les mises à jour WordPress.
+            </p>
+            <div class="niveau-bar">
+              <div class="niveau-dots"><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot"></div></div>
+              <span class="niveau-label">Très bon — architecture modulaire maîtrisée</span>
+            </div>
+          </div>
+        </div>
+        <div class="ac-item">
+          <span class="ac-tag">AC2</span>
+          <div class="ac-content">
+            <h4>Faire évoluer une application existante</h4>
+            <p>
+              J'ai fait évoluer le plugin de semaine en semaine de façon itérative : ajout du profil utilisateur,
+              de l'historique des abonnements, du mode prévisualisation admin — sans casser les fonctionnalités existantes.
+              La refactorisation complète de la semaine 8 a permis de rendre le code repris par un autre développeur.
+            </p>
+            <div class="niveau-bar">
+              <div class="niveau-dots"><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div></div>
+              <span class="niveau-label">Excellent — cycle itératif tout au long du stage</span>
+            </div>
+          </div>
+        </div>
+        <div class="ac-item">
+          <span class="ac-tag">AC3</span>
+          <div class="ac-content">
+            <h4>Adopter de bonnes pratiques de conception et de programmation</h4>
+            <p>
+              Validation des données webhook (sécurité), gestion des erreurs (Stripe indisponible, webhook non reçu),
+              respect des principes RGPD de base pour les données utilisateurs, et refactorisation du code
+              pour améliorer lisibilité et maintenabilité.
+            </p>
+            <div class="niveau-bar">
+              <div class="niveau-dots"><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot"></div></div>
+              <span class="niveau-label">Très bon — sécurité et maintenabilité au cœur du projet</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comp-card" id="comp2">
+      <div class="comp-card-header" onclick="toggleComp('comp2')">
+        <div class="comp-number">2</div>
+        <h3>Optimiser des applications informatiques</h3>
+        <svg class="comp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="comp-body">
+        <div class="ac-item">
+          <span class="ac-tag">AC</span>
+          <div class="ac-content">
+            <h4>Déboguer et corriger des problèmes en production</h4>
+            <p>
+              Identification et correction de plusieurs bugs critiques : chargement infini sur pages Elementor,
+              incohérence de synchronisation Stripe/WordPress, cas limites d'abonnements expirés.
+              Méthode : audit complet, tests de scénarios réels, correction itérative.
+            </p>
+            <div class="niveau-bar">
+              <div class="niveau-dots"><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot"></div></div>
+              <span class="niveau-label">Très bon — débogage méthodique et rigoureux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comp-card" id="comp4">
+      <div class="comp-card-header" onclick="toggleComp('comp4')">
+        <div class="comp-number">4</div>
+        <h3>Gérer des données de l'information</h3>
+        <svg class="comp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="comp-body">
+        <div class="ac-item">
+          <span class="ac-tag">AC</span>
+          <div class="ac-content">
+            <h4>Structurer et exploiter des données utilisateur</h4>
+            <p>
+              Conception du schéma de données du profil utilisateur (nom du chien, race, taille, préférences…)
+              stocké dans WordPress User Meta de façon structurée et exploitable pour une segmentation marketing future.
+              Collecte et normalisation de données via API partenaires (gestion des formats hétérogènes, dédoublonnage).
+            </p>
+            <div class="niveau-bar">
+              <div class="niveau-dots"><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot"></div><div class="ndot"></div></div>
+              <span class="niveau-label">Bon — structuration propre et conforme RGPD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comp-card" id="comp5">
+      <div class="comp-card-header" onclick="toggleComp('comp5')">
+        <div class="comp-number">5</div>
+        <h3>Conduire un projet</h3>
+        <svg class="comp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="comp-body">
+        <div class="ac-item">
+          <span class="ac-tag">AC</span>
+          <div class="ac-content">
+            <h4>Gérer et suivre un projet en autonomie</h4>
+            <p>
+              Point de démarrage avec découpage des tâches en semaine 2, points de suivi hebdomadaires avec l'ensemble de l'équipe,
+              audits autonomes (semaine 4 : listing des tâches restantes), démonstration complète et recueil de retours métier
+              en semaine 8. Priorisation continue des fonctionnalités selon les besoins terrain.
+            </p>
+            <div class="niveau-bar">
+              <div class="niveau-dots"><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot"></div></div>
+              <span class="niveau-label">Très bon — autonomie et communication régulière</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comp-card" id="comp6">
+      <div class="comp-card-header" onclick="toggleComp('comp6')">
+        <div class="comp-number">6</div>
+        <h3>Collaborer au sein d'une équipe informatique</h3>
+        <svg class="comp-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+      <div class="comp-body">
+        <div class="ac-item">
+          <span class="ac-tag">AC4</span>
+          <div class="ac-content">
+            <h4>Rendre compte de son activité professionnelle</h4>
+            <p>
+              Réunions hebdomadaires d'équipe, démonstrations régulières à Sophie et Léa, documentation du code
+              pour faciliter la reprise par un autre développeur (semaine 8), participation aux discussions
+              sur la stratégie de vente et les pistes d'optimisation produit.
+            </p>
+            <div class="niveau-bar">
+              <div class="niveau-dots"><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot on"></div><div class="ndot"></div></div>
+              <span class="niveau-label">Très bon — communication claire et régulière</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  
+<div class="section-divider"></div>
+
+<section id="contact">
+  <div class="section-tag">Contact</div>
+  <h2 class="section-title">Me contacter</h2>
+  <p class="lead">N'hésitez pas à me contacter pour toute question sur ce portfolio ou mon parcours.</p>
+  <div class="contact-grid">
+    <a href="mailto:natan.bouche@gmail.com" class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div><h4>Email</h4><p>natan.bouche@gmail.com</p></div>
+    </a>
+    <a href="https://www.linkedin.com/in/natan-bouche" class="contact-card">
+      <div class="contact-icon">💼</div>
+      <div><h4>LinkedIn</h4><p>linkedin.com/in/natan-bouche</p></div>
+    </a>
+    <a href="https://github.com/Natan90" class="contact-card">
+      <div class="contact-icon">🐙</div>
+      <div><h4>GitHub</h4><p>github.com/Natan90</p></div>
+    </a>
+    <a href="#" class="contact-card">
+      <div class="contact-icon">📄</div>
+      <div><h4>CV</h4><p>Télécharger mon CV</p></div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  Portfolio BUT Informatique 2ᵉ année · Stage EmmeneTonChien.com · <span id="yr"></span>
+</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+function toggleComp(id) { document.getElementById(id).classList.toggle('open'); }
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id);
+    });
+  });
+}, { threshold: 0.35 });
+sections.forEach(s => io.observe(s));
+</script>
+</body>
+</html>
