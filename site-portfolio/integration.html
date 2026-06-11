@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intégration en entreprise — Portfolio Natan Bouche</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Natan <span>Bouche</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="technique.html">Technique</a></li>
+    <li><a href="projet.html">Suivi de projet</a></li>
+    <li><a href="integration.html" class="nav-current">Intégration</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="page-domain">
+  <div class="section-tag">Domaine intégration en entreprise</div>
+  <h2 class="section-title">Intégration dans<br><em style="color:var(--accent)">l'équipe</em></h2>
+  <p class="lead page-intro">
+  Immersion dans une PME de ~10 personnes à Montpellier : réunions hebdomadaires, participation à la vie de l'entreprise et montée en autonomie progressive.
+  </p>
+
+  <div class="grid-2" style="margin-bottom:2rem;">
+    <div class="info-card">
+      <div class="info-card-label">Vie d'équipe</div>
+      <h3>Participation & événements</h3>
+      <ul>
+        <li>Réunion d'équipe hebdomadaire (lundi matin)</li>
+        <li>Travail en open space avec toute l'équipe</li>
+        <li>Participation aux décisions produit sur le Pass Wouafer's</li>
+      </ul>
+    </div>
+    <div class="info-card">
+      <div class="info-card-label">Autonomie</div>
+      <h3>Organisation du travail</h3>
+      <ul>
+        <li>Poste dédié, accès FTP / WordPress / Stripe (bac à sable puis prod)</li>
+        <li>Points de suivi hebdomadaires avec Sophie (direction)</li>
+        <li>Gestion des priorités en fonction des retours</li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-tabs="integration">
+    <div class="tabs-bar" role="tablist">
+      <button type="button" class="tab-btn active" data-tab-trigger="integration" data-tab-id="trace-1" role="tab">Trace 1</button>
+      <button type="button" class="tab-btn" data-tab-trigger="integration" data-tab-id="trace-2" role="tab">Trace 2</button>
+      <button type="button" class="tab-btn tab-bilan" data-tab-trigger="integration" data-tab-id="bilan" role="tab">Bilan / Analyse</button>
+    </div>
+
+    <article class="tab-panel active trace-page" data-tab-panel="integration" data-tab-id="trace-1" role="tabpanel">
+      <span class="trace-num">Trace n°1</span>
+      <h2 class="trace-title">Intégration dans l'équipe et dans le projet</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-comm">Travailler en équipe</span></li>
+          <li><span class="sf sf-comm">Rendre compte de son activité</span></li>
+          <li><span class="sf sf-dev">S'approprier un environnement technique existant</span></li>
+        </ul>
+      </div>
+
+      <div class="trace-block">
+        <h3>Intégration dans l'équipe</h3>
+        <p>
+          Dès la première semaine, j'ai participé aux <span class="highlight-point">réunions hebdomadaires du lundi matin</span>
+          avec l'ensemble de l'équipe. Ces réunions m'ont permis de comprendre
+          le fonctionnement de l'entreprise, d'écouter les projets en cours (marketing, contenu éditorial)
+          et de prendre la parole sur l'avancement du Pass Wouafer's chaque semaine.
+        </p>
+        <p style="margin-top:0.75rem;">
+          Au quotidien, je travaillais en open space dans les locaux de l'entreprise.
+          J'étais le seul développeur sur le projet. Les échanges avec le reste de l'équipe
+          relevaient du cadre professionnel et humain, pas d'une collaboration technique.
+          Les points réguliers avec <span class="highlight-point">Sophie (direction)</span>
+          m'ont appris à adapter mon discours à un interlocuteur non-développeur :
+          vulgariser les sujets techniques et hiérarchiser ce qui comptait pour l'entreprise.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Intégration dans le projet</h3>
+        <p>
+          Le projet m'a été confié avec une contrainte claire : travailler dans l'environnement
+          déjà en place. L'entreprise utilisait <span class="highlight-point">WordPress</span>
+          comme CMS, <span class="highlight-point">Elementor</span> comme page builder,
+          et le serveur était déjà configuré avec une architecture de fichiers WordPress existante.
+          Je n'avais pas le choix des outils : il fallait s'y adapter rapidement.
+        </p>
+        <p style="margin-top:0.75rem;">
+          J'ai d'abord pris en main la base de code PHP existante avant d'y intégrer le plugin.
+          Comprendre les conventions WordPress (hooks, filtres, structure de thème) et respecter
+          l'architecture en place était un prérequis pour que mon code soit maintenable
+          par l'équipe après mon départ.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés</h3>
+        <p>
+          <span class="sf sf-comm">Travailler en équipe</span> : participation aux réunions,
+          points réguliers avec Sophie pour cadrer les priorités.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-comm">Rendre compte de son activité</span> : chaque lundi,
+          présentation orale de l'avancement structurée en
+          <span class="highlight-point">fait / en cours / bloquant</span> devant l'équipe.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-dev">S'approprier un environnement technique existant</span> :
+          prise en main de WordPress, Elementor et de l'architecture serveur imposée par l'entreprise,
+          sans pouvoir repartir de zéro, avec l'obligation de comprendre l'existant avant de modifier quoi que ce soit.
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel trace-page" data-tab-panel="integration" data-tab-id="trace-2" role="tabpanel" hidden>
+      <span class="trace-num">Trace n°2</span>
+      <h2 class="trace-title">Autonomie au quotidien — Poste & outils</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-comm">S'adapter à un environnement professionnel</span></li>
+          <li><span class="sf sf-projet">Organiser son travail</span></li>
+          <li><span class="sf sf-dev">Utiliser des outils de développement</span></li>
+        </ul>
+      </div>
+
+      <figure class="trace-media">
+        <div class="trace-frame">
+          <img src="assets/traces/integration-02a.png" alt="FileZilla serveur distant et échange Slack avec Sophie pour définir les besoins">
+        </div>
+        <figcaption>Figure 2a — Autonomie technique : accès au serveur distant via FileZilla et échange avec Sophie (direction) pour recueillir et préciser les besoins.</figcaption>
+      </figure>
+
+      <figure class="trace-media" style="margin-top:2rem;">
+        <div class="trace-frame">
+          <img src="assets/traces/integration-02b.png" alt="VS Code et WordPress admin ouverts en simultané">
+        </div>
+        <figcaption>Figure 2b — Environnement de développement : VS Code (code PHP) et WordPress admin ouverts simultanément pour le cycle développement / test.</figcaption>
+      </figure>
+
+      <div class="trace-block">
+        <h3>Descriptif de la trace</h3>
+        <p>
+          Dès la semaine 3, j'ai géré seul les déploiements via FileZilla et les échanges directs
+          avec Sophie pour recadrer les besoins (figure 2a). La figure 2b montre l'environnement
+          de développement quotidien : VS Code pour le code PHP et WordPress admin pour tester
+          immédiatement les changements. Sophie m'a fait confiance pour
+          <span class="highlight-point">prioriser mes journées</span> en autonomie entre développement,
+          corrections et collecte API.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés & lien avec la trace</h3>
+        <p>
+          <span class="sf sf-comm">S'adapter à un environnement professionnel</span> : la figure 2a
+          montre la communication directe avec la direction (Slack avec Sophie) pour recueillir
+          des besoins, une posture professionnelle au-delà du simple développement.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-dev">Utiliser des outils de développement</span> : la figure 2b illustre
+          la maîtrise simultanée de la chaîne complète (éditeur, serveur distant, back-office WordPress).
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel bilan-section" data-tab-panel="integration" data-tab-id="bilan" role="tabpanel" hidden>
+      <h2 class="trace-title" style="margin-bottom:1.5rem;">Bilan — Savoir-faire généraux (intégration)</h2>
+
+      <div class="bilan-card">
+        <h3>Compétence 6 — Collaborer au sein d'une équipe informatique</h3>
+        <div class="bilan-grid">
+          <div class="bilan-item full">
+            <h4>Contexte d'utilisation des savoir-faire élémentaires</h4>
+            <p>
+              <span class="sf sf-comm">Communication</span> et <span class="sf sf-comm">travail en équipe</span> (trace 1) lors des réunions hebdomadaires.
+              <span class="sf sf-comm">Adaptation professionnelle</span> et <span class="sf sf-comm">autonomie</span> (trace 2) : gestion autonome des outils et du déploiement dès S3.
+              Documentation du code en S8 pour faciliter la reprise par Clovis.
+            </p>
+          </div>
+          <div class="bilan-item">
+            <h4>Contexte d'apprentissage</h4>
+            <p>Travail en groupe : projets BUT. Communication pro et posture en entreprise : stage (première immersion longue en PME).</p>
+          </div>
+          <div class="bilan-item">
+            <h4>Difficulté</h4>
+            <p>Faible à modérée : environnement bienveillant. Défi principal : vulgariser les sujets techniques pour une audience non développeur.</p>
+          </div>
+          <div class="bilan-item full">
+            <h4>Avant / après le stage</h4>
+            <div class="avant-apres">
+              <div>
+                <div class="aa-label">Avant</div>
+                <p>Présentations surtout devant des pairs et enseignants. Peu d'échanges avec le « métier ».</p>
+              </div>
+              <div>
+                <div class="aa-label">Après</div>
+                <p>À l'aise pour animer un point hebdo, recueillir un besoin et documenter pour un tiers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bilan-card">
+        <h3>Synthèse de l'intégration</h3>
+        <div class="bilan-grid">
+          <div class="bilan-item">
+            <h4>Participation aux événements</h4>
+            <p>Réunions lundi, participation aux réflexions sur la stratégie de vente du Pass Wouafer's.</p>
+          </div>
+          <div class="bilan-item">
+            <h4>Relations hiérarchiques</h4>
+            <p>Sophie Morche (tutrice, validation technique et priorités)</p>
+          </div>
+          <div class="bilan-item full">
+            <h4>Ce que l'entreprise m'a apporté</h4>
+            <p>Vision produit, contraintes business réelles, confiance sur un livrable critique pour le chiffre d'affaires du Pass Wouafer's.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <a href="projet.html" style="color:var(--text3); text-decoration:none;">← Suivi de projet</a> ·
+  <a href="index.html" style="color:var(--text3); text-decoration:none;">Accueil</a> ·
+  <span id="yr"></span>
+</footer>
+
+<script src="js/tabs.js"></script>
+<script src="js/lightbox.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

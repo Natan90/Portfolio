@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suivi de projet — Portfolio Natan Bouche</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Natan <span>Bouche</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="technique.html">Technique</a></li>
+    <li><a href="projet.html" class="nav-current">Suivi de projet</a></li>
+    <li><a href="integration.html">Intégration</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="page-domain">
+  <div class="section-tag">Domaine suivi de projet</div>
+  <h2 class="section-title">Conduite du<br><em style="color:var(--accent)">projet</em></h2>
+  <p class="lead page-intro">
+    Planification, suivi hebdomadaire, audits et priorisation des livrables du Pass Wouafer's sur 9 semaines.
+    Les traces documentent la gestion de projet en autonomie progressive.
+  </p>
+
+  <div data-tabs="projet">
+    <div class="tabs-bar" role="tablist">
+      <button type="button" class="tab-btn active" data-tab-trigger="projet" data-tab-id="trace-1" role="tab">Trace 1</button>
+      <button type="button" class="tab-btn" data-tab-trigger="projet" data-tab-id="trace-2" role="tab">Trace 2</button>
+      <button type="button" class="tab-btn" data-tab-trigger="projet" data-tab-id="trace-3" role="tab">Trace 3</button>
+      <button type="button" class="tab-btn tab-bilan" data-tab-trigger="projet" data-tab-id="bilan" role="tab">Bilan / Analyse</button>
+    </div>
+
+    <article class="tab-panel active trace-page" data-tab-panel="projet" data-tab-id="trace-1" role="tabpanel">
+      <span class="trace-num">Trace n°1</span>
+      <h2 class="trace-title">Découpage des tâches — Semaine 2</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-projet">Planifier les activités du projet</span></li>
+          <li><span class="sf sf-projet">Identifier les acteurs et leurs rôles</span></li>
+          <li><span class="sf sf-comm">Communiquer avec les parties prenantes</span></li>
+        </ul>
+      </div>
+
+      <figure class="trace-media">
+        <div class="trace-frame">
+          <img src="assets/traces/projet-01.png" alt="Planning et découpage des tâches semaine 2">
+        </div>
+        <figcaption>Figure 1 — Planification initiale après prise en main du cahier des charges (semaine 2).</figcaption>
+      </figure>
+
+      <div class="trace-block">
+        <h3>Descriptif de la trace</h3>
+        <p>
+          Après la découverte (S1), j'ai structuré le travail de la semaine 2 en tâches prioritaires alignées
+          sur le livrable « parcours post-paiement fonctionnel ». Cette trace montre le
+          <span class="highlight-point">découpage que j'ai proposé à Sophie</span> avant de coder l'intégration Stripe.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés & lien avec la trace</h3>
+        <p>
+          <span class="sf sf-projet">Planifier les activités</span> : les colonnes / lignes
+          <span class="highlight-point">« En cours » / « Bloquant » / « Terminé »</span> sur la capture traduisent
+          la priorisation webhook → auth → email.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-comm">Communiquer</span> : validation du plan avec Sophie (priorités business et techniques).
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel trace-page" data-tab-panel="projet" data-tab-id="trace-2" role="tabpanel" hidden>
+      <span class="trace-num">Trace n°2</span>
+      <h2 class="trace-title">Audit & recensement des tâches restantes — Semaine 4</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-projet">Suivre l'avancement du projet</span></li>
+          <li><span class="sf sf-projet">Évaluer les risques et les opportunités</span></li>
+          <li><span class="sf sf-qualite">Tester et valider une application</span></li>
+        </ul>
+      </div>
+
+      <figure class="trace-media">
+        <div class="trace-frame">
+          <img src="assets/traces/projet-02.png" alt="Liste d'audit semaine 4">
+        </div>
+        <figcaption>Figure 2 — Audit autonome à mi-parcours : état des lieux avant la phase profil utilisateur.</figcaption>
+      </figure>
+
+      <div class="trace-block">
+        <h3>Descriptif de la trace</h3>
+        <p>
+          À mi-stage, j'ai réalisé un <span class="highlight-point">audit complet</span> du plugin et du parcours
+          utilisateur pour lister bugs, dettes techniques et fonctionnalités restantes. Document partagé en réunion
+          d'équipe pour réaligner les priorités des semaines 5 à 7.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés & lien avec la trace</h3>
+        <p>
+          <span class="sf sf-projet">Suivre l'avancement</span> : la capture montre le statut par lot fonctionnel.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-projet">Évaluer les risques</span> : items comme
+          <span class="highlight-point">« abonnement expiré non bloqué »</span> identifiés avant mise en production.
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel trace-page" data-tab-panel="projet" data-tab-id="trace-3" role="tabpanel" hidden>
+      <span class="trace-num">Trace n°3</span>
+      <h2 class="trace-title">Démonstration & recueil des retours — Semaine 8</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-comm">Présenter les résultats du projet</span></li>
+          <li><span class="sf sf-projet">Ajuster le projet selon les retours</span></li>
+          <li><span class="sf sf-projet">Clôturer le projet</span></li>
+        </ul>
+      </div>
+
+      <div class="trace-block">
+        <h3>La démonstration</h3>
+        <p>
+          En semaine 8, j'ai présenté à Sophie le parcours complet du Pass Wouafer's en conditions réelles.
+          La démo couvrait l'enchaînement entier : souscription sur Stripe, réception de l'email de définition
+          de mot de passe, connexion sur le formulaire personnalisé, vérification de l'abonnement en temps réel,
+          accès à l'espace membre et aux codes promo, consultation du profil et de l'historique de paiements.
+          C'était la première fois que <span class="highlight-point">l'ensemble du parcours fonctionnait de bout en bout</span>
+          sans intervention manuelle.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Les retours et la semaine 8</h3>
+        <p>
+          À l'issue de la démo, Sophie a validé le fonctionnel mais a soulevé une question importante :
+          que se passe-t-il quand je pars ? Le code tel qu'il était à ce stade était difficile à reprendre
+          pour quelqu'un d'autre. Elle a demandé explicitement que le plugin soit
+          <span class="highlight-point">repris facilement par Clovis</span>, le prochain développeur,
+          et que l'équipe puisse gérer l'espace membre sans passer par du code.
+        </p>
+        <p style="margin-top:0.75rem;">
+          Ces retours ont défini tout le contenu de la semaine 8 : refactorisation du plugin en modules distincts,
+          création de l'interface d'administration no-code pour la whitelist des pages,
+          développement des 13 widgets Elementor et rédaction de la documentation technique.
+          La démo n'était donc pas une clôture mais un <span class="highlight-point">point de pivot</span>
+          qui a orienté la dernière semaine de travail.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés</h3>
+        <p>
+          <span class="sf sf-comm">Présenter les résultats du projet</span> : scénario de démo structuré
+          pour un interlocuteur non-technique, en suivant le parcours utilisateur de A à Z
+          plutôt qu'une présentation fonctionnalité par fonctionnalité.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-projet">Ajuster le projet selon les retours</span> : traduction immédiate
+          des remarques de Sophie en tâches concrètes pour S8,
+          <span class="highlight-point">maintenabilité et reprise par un tiers</span>
+          devenant les nouvelles priorités de la dernière semaine.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-projet">Clôturer le projet</span> : livraison d'un plugin documenté,
+          modulaire et utilisable en no-code par l'équipe, de façon à ce que mon départ
+          ne crée pas de dépendance sur ma présence.
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel bilan-section" data-tab-panel="projet" data-tab-id="bilan" role="tabpanel" hidden>
+      <h2 class="trace-title" style="margin-bottom:1.5rem;">Bilan — Savoir-faire généraux (suivi de projet)</h2>
+
+      <div class="bilan-card">
+        <h3>Compétence 5 — Conduire un projet</h3>
+        <div class="bilan-grid">
+          <div class="bilan-item full">
+            <h4>Contexte d'utilisation des savoir-faire élémentaires</h4>
+            <p>
+              <span class="sf sf-projet">Planifier</span> (trace 1), <span class="sf sf-projet">suivre</span> et
+              <span class="sf sf-projet">évaluer les risques</span> (trace 2), <span class="sf sf-projet">ajuster</span> et
+              <span class="sf sf-projet">clôturer</span> (trace 3). Points hebdomadaires avec l'équipe tout au long du stage.
+            </p>
+          </div>
+          <div class="bilan-item">
+            <h4>Contexte d'apprentissage</h4>
+            <p>Gestion de projet : cours BUT + SAÉ. Application en conditions réelles : stage uniquement (premier projet livré en entreprise sur 9 semaines).</p>
+          </div>
+          <div class="bilan-item">
+            <h4>Difficulté</h4>
+            <p>Modérée : estimer le temps sur des tâches techniques inconnues (Stripe) était le principal défi.</p>
+          </div>
+          <div class="bilan-item full">
+            <h4>Avant / après le stage</h4>
+            <div class="avant-apres">
+              <div>
+                <div class="aa-label">Avant</div>
+                <p>Projets scolaires courts, planning imposé par l'enseignant.</p>
+              </div>
+              <div>
+                <div class="aa-label">Après</div>
+                <p>Autonomie sur le découpage, audits proactifs, priorisation selon le métier</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bilan-card">
+        <h3>Déroulement global (référence)</h3>
+        <p style="font-size:13.5px; color:var(--text2); line-height:1.75; margin-bottom:1rem;">
+          Timeline complète du stage (8 semaines opérationnelles). Chaque semaine est documentée par une trace ou une activité projet.
+        </p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-week">S1</div>
+            <div class="timeline-title">Découverte & prise en main</div>
+            <div class="timeline-desc">Équipe, écosystème, cahier des charges, installation poste.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-week">S2–S3</div>
+            <div class="timeline-title">Stripe & parcours post-paiement</div>
+            <div class="timeline-desc">Webhooks, connexion, fluidification (voir trace 1).</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-week">S4–S6</div>
+            <div class="timeline-title">Abonnements, profil, cas limites</div>
+            <div class="timeline-desc">Audit S4, historique compte, cas limites Stripe (voir trace 2).</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-week">S7–S8</div>
+            <div class="timeline-title">Finalisation & démo</div>
+            <div class="timeline-desc">SEO pages sensibles, refactorisation, admin (voir trace 3).</div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <a href="technique.html" style="color:var(--text3); text-decoration:none;">← Technique</a> ·
+  <a href="integration.html" style="color:var(--text3); text-decoration:none;">Intégration →</a> ·
+  <span id="yr"></span>
+</footer>
+
+<script src="js/tabs.js"></script>
+<script src="js/lightbox.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

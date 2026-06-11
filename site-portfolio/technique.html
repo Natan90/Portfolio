@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technique — Portfolio Natan Bouche</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Natan <span>Bouche</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="technique.html" class="nav-current">Technique</a></li>
+    <li><a href="projet.html">Suivi de projet</a></li>
+    <li><a href="integration.html">Intégration</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="page-domain">
+  <div class="section-tag">Domaine technique</div>
+  <h2 class="section-title">Réalisations<br><em style="color:var(--accent)">techniques</em></h2>
+  <p class="lead page-intro">
+    Développement du plugin WordPress sur-mesure, intégration Stripe par webhooks, authentification
+    et gestion des abonnements. Chaque trace illustre un savoir-faire élémentaire du référentiel BUT.
+  </p>
+
+  <div data-tabs="technique">
+    <div class="tabs-bar" role="tablist">
+      <button type="button" class="tab-btn active" data-tab-trigger="technique" data-tab-id="trace-1" role="tab">Trace 1</button>
+      <button type="button" class="tab-btn" data-tab-trigger="technique" data-tab-id="trace-2" role="tab">Trace 2</button>
+      <button type="button" class="tab-btn" data-tab-trigger="technique" data-tab-id="trace-3" role="tab">Trace 3</button>
+      <button type="button" class="tab-btn" data-tab-trigger="technique" data-tab-id="trace-4" role="tab">Trace 4</button>
+      <button type="button" class="tab-btn tab-bilan" data-tab-trigger="technique" data-tab-id="bilan" role="tab">Bilan / Analyse</button>
+    </div>
+
+    <article class="tab-panel active trace-page" data-tab-panel="technique" data-tab-id="trace-1" role="tabpanel">
+      <span class="trace-num">Trace n°1</span>
+      <h2 class="trace-title">Architecture modulaire du plugin WordPress</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-archi">Concevoir une architecture logicielle</span></li>
+          <li><span class="sf sf-qualite">Refactoriser du code existant</span></li>
+          <li><span class="sf sf-qualite">Appliquer des bonnes pratiques de développement</span></li>
+        </ul>
+      </div>
+
+      <div class="trace-pair">
+        <figure class="trace-media">
+          <div class="trace-frame">
+            <img src="assets/traces/technique-01a.png" alt="Ancienne architecture monolithique du plugin">
+          </div>
+          <figcaption>Figure 1a — Avant : code monolithique, god files, sans séparation des responsabilités.</figcaption>
+        </figure>
+        <figure class="trace-media">
+          <div class="trace-frame">
+            <img src="assets/traces/technique-01b.png" alt="Nouvelle architecture modulaire du plugin">
+          </div>
+          <figcaption>Figure 1b — Après : plusieurs modules distincts, fichier d'entrée central, 1 responsabilité par fichier.</figcaption>
+        </figure>
+      </div>
+
+      <div class="trace-block">
+        <h3>Descriptif de la trace</h3>
+        <p>
+          Le plugin a démarré comme un <span class="highlight-point">fichier monolithique unique</span>
+          concentrant toute la logique : webhooks, authentification, profil utilisateur, administration.
+          Cette organisation rendait le code illisible et impossible à transmettre. La figure 1a montre
+          cet état initial. En semaine 8, après la démonstration à Sophie et sa demande explicite de
+          <span class="highlight-point">faciliter la reprise par Clovis</span>, j'ai refactorisé
+          l'intégralité du plugin en plusieurs modules distincts à responsabilité unique. La figure 1b montre
+          le résultat : chaque domaine fonctionnel dispose de son propre dossier, le fichier d'entrée
+          ne fait qu'orchestrer les modules sans contenir de logique métier.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés & lien avec la trace</h3>
+        <p>
+          <span class="sf sf-qualite">Refactoriser du code existant</span> : la comparaison
+          figures <span class="highlight-point">1a → 1b</span> illustre directement la transformation :
+          réduction de la taille des fichiers, suppression des dépendances implicites entre
+          fonctionnalités, découpage selon le principe de responsabilité unique.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-archi">Concevoir une architecture logicielle</span> : la structure
+          retenue (figure 1b) permet d'ajouter ou modifier un module sans risquer d'affecter les autres.
+          Le fichier <span class="highlight-point">custom-code.php</span> visible en tête d'arborescence
+          est le seul point d'entrée ; il enregistre chaque module sans couplage fort.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-qualite">Appliquer des bonnes pratiques</span> : utilisation des
+          hooks WordPress plutôt que modification du core, nommage cohérent des fonctions,
+          chaque fichier peut être lu et modifié indépendamment par Clovis sans connaissance
+          du reste du plugin.
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel trace-page" data-tab-panel="technique" data-tab-id="trace-2" role="tabpanel" hidden>
+      <span class="trace-num">Trace n°2</span>
+      <h2 class="trace-title">Intégration Stripe — Webhooks & création de compte</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-dev">Développer la partie back-end d'une application</span></li>
+          <li><span class="sf sf-securite">Sécuriser une application</span></li>
+          <li><span class="sf sf-data">Manipuler des bases de données</span></li>
+        </ul>
+      </div>
+
+      <figure class="trace-media">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-02.png" alt="Configuration webhook Stripe et logs de traitement">
+        </div>
+        <figcaption>Figure 2a — Réception d'un webhook Stripe et création automatique de l'utilisateur WordPress (semaine 2–3).</figcaption>
+      </figure>
+
+      <figure class="trace-media" style="margin-top:2rem;">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-03.png" alt="Code PHP de vérification de signature Stripe et gestion des exceptions">
+        </div>
+        <figcaption>Figure 2b — Vérification de la signature HMAC du webhook et gestion des exceptions : protection contre les requêtes forgées.</figcaption>
+      </figure>
+
+      <div class="trace-block">
+        <h3>Descriptif de la trace</h3>
+        <p>
+          La figure 2a montre les webhooks reçus depuis le dashboard Stripe avec leur statut de livraison.
+          La figure 2b montre le code côté plugin qui les traite : à chaque requête entrante, la
+          <span class="highlight-point">signature HMAC est vérifiée</span> avant tout traitement —
+          toute requête sans signature valide est rejetée immédiatement. Ce mécanisme a bloqué
+          une fausse requête lors des tests en semaine 3. En cas de succès, le handler crée le
+          compte WordPress, stocke l'ID client Stripe et déclenche l'email de mot de passe.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés & lien avec la trace</h3>
+        <p>
+          <span class="sf sf-securite">Sécuriser une application</span> : la figure 2b montre
+          l'appel à <span class="highlight-point"><code>Webhook::constructEvent()</code></span>
+          et les deux <code>catch</code> qui stoppent les requêtes invalides, preuve directe
+          de la protection contre les injections de faux webhooks.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-dev">Développer le back-end</span> : la figure 2a confirme que les
+          événements Stripe (<code>checkout.session.completed</code>) arrivent et sont traités
+          avec succès. Le handler PHP mappe le payload JSON vers les métadonnées utilisateur WordPress.
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel trace-page" data-tab-panel="technique" data-tab-id="trace-3" role="tabpanel" hidden>
+      <span class="trace-num">Trace n°3</span>
+      <h2 class="trace-title">Authentification & contrôle d'accès aux abonnements</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-securite">Sécuriser une application</span></li>
+          <li><span class="sf sf-dev">Développer la partie back-end</span></li>
+          <li><span class="sf sf-qualite">Tester et valider une application</span></li>
+        </ul>
+      </div>
+
+      <figure class="trace-media">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-04.png" alt="Espace membre connecté avec statut d'abonnement actif">
+        </div>
+        <figcaption>Figure 3a — Espace membre : utilisateur connecté avec abonnement Stripe actif — accès autorisé.</figcaption>
+      </figure>
+
+      <figure class="trace-media" style="margin-top:2rem;">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-05.png" alt="Dashboard Stripe avec abonnement de test supprimé">
+        </div>
+        <figcaption>Figure 3b — Dashboard Stripe (test) : suppression de l'abonnement — état qui doit déclencher le blocage côté site.</figcaption>
+      </figure>
+
+      <figure class="trace-media" style="margin-top:2rem;">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-06.png" alt="Site bloquant l'accès après vérification de l'abonnement Stripe">
+        </div>
+        <figcaption>Figure 3c — Blocage côté site : après connexion, l'utilisateur sans abonnement actif est redirigé vers la page de régularisation.</figcaption>
+      </figure>
+
+      <div class="trace-block">
+        <h3>Descriptif de la trace</h3>
+        <p>
+          Ces trois captures documentent le scénario complet de la sécurisation du Pass Wouafer's.
+          La figure 3a montre l'accès autorisé pour un abonné actif.
+          Les figures 3b et 3c montrent le cas de test : l'abonnement est supprimé dans Stripe (3b),
+          puis à la prochaine connexion le plugin interroge l'API Stripe en temps réel, détecte le
+          statut inactif et <span class="highlight-point">refuse l'accès</span> en redirigeant vers
+          la page de régularisation (3c). Les cas limites (résiliation, paiement échoué, double abonnement)
+          ont été testés et validés en semaine 6.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés & lien avec la trace</h3>
+        <p>
+          <span class="sf sf-securite">Sécuriser une application</span> : la figure 3c montre le
+          refus d'accès effectif. La comparaison 3a (accès OK) / 3c (accès bloqué) prouve que
+          <span class="highlight-point">seuls les abonnés actifs passent</span>.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-qualite">Tester et valider</span> : la figure 3b est le setup du test —
+          suppression volontaire de l'abonnement dans Stripe pour vérifier que le blocage se
+          déclenche correctement côté site. C'est un test de bout en bout (Stripe → API → plugin → UI).
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel trace-page" data-tab-panel="technique" data-tab-id="trace-4" role="tabpanel" hidden>
+      <span class="trace-num">Trace n°4</span>
+      <h2 class="trace-title">Maintenabilité, documentation et widgets Elementor no-code</h2>
+
+      <div class="sf-legend">
+        <div class="sf-legend-title">Savoir-faire élémentaires de cette trace</div>
+        <ul class="sf-list">
+          <li><span class="sf sf-qualite">Documenter un projet logiciel</span></li>
+          <li><span class="sf sf-dev">Développer des composants d'interface réutilisables</span></li>
+          <li><span class="sf sf-archi">Concevoir pour la maintenabilité et la reprise</span></li>
+        </ul>
+      </div>
+
+      <figure class="trace-media">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-07a.png" alt="Tabs d'administration custom code côté WordPress admin">
+        </div>
+        <figcaption>Figure 4a — Interface d'administration du plugin : onglets custom code accessibles depuis WordPress admin, configurables par l'équipe sans développement.</figcaption>
+      </figure>
+
+      <figure class="trace-media" style="margin-top:2rem;">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-07b.png" alt="Widgets Elementor custom prêts au drag & drop">
+        </div>
+        <figcaption>Figure 4b — 13 widgets Elementor sur-mesure dans le panneau : l'équipe peut construire ou modifier l'espace membre par drag & drop.</figcaption>
+      </figure>
+
+      <figure class="trace-media" style="margin-top:2rem;">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-07c.png" alt="Personnalisation des champs de texte du formulaire de connexion en no-code dans Elementor">
+        </div>
+        <figcaption>Figure 4c — Options de personnalisation no-code du widget formulaire de connexion : labels, placeholders et messages modifiables depuis l'interface Elementor.</figcaption>
+      </figure>
+
+      <figure class="trace-media" style="margin-top:2rem;">
+        <div class="trace-frame">
+          <img src="assets/traces/technique-07d.png" alt="Personnalisation de style du formulaire de connexion en no-code dans Elementor">
+        </div>
+        <figcaption>Figure 4d — Personnalisation visuelle no-code du widget : couleurs, marges et typographie configurables directement dans Elementor.</figcaption>
+      </figure>
+
+      <div class="trace-block">
+        <h3>Descriptif de la trace</h3>
+        <p>
+          Deux contraintes structuraient le projet au-delà du fonctionnel :
+          le plugin devait être <span class="highlight-point">repris sans difficulté par Clovis</span>,
+          le prochain développeur, et l'équipe non-technique devait pouvoir
+          <span class="highlight-point">personnaliser l'espace membre sans toucher au code</span>.
+          Cette trace documente les livrables construits pour répondre à ces deux exigences :
+          13 widgets Elementor sur-mesure, une interface d'administration no-code pour la whitelist des pages,
+          un mode de prévisualisation des shortcodes dans l'éditeur (indépendant de l'état de connexion),
+          ainsi qu'une documentation technique et un guide utilisateur rédigés en fin de stage.
+        </p>
+      </div>
+
+      <div class="trace-block">
+        <h3>Savoir-faire mobilisés & lien avec la trace</h3>
+        <p>
+          <span class="sf sf-dev">Développer des composants d'interface réutilisables</span> :
+          les <span class="highlight-point">13 widgets visibles dans le panneau Elementor</span>
+          (connexion, profil, abonnement, paiements, réinitialisation de mot de passe...)
+          permettent à n'importe quel membre de l'équipe de construire ou modifier une page
+          de l'espace membre par glisser-déposer, sans écrire une ligne de PHP ou de CSS.
+          Chaque widget expose des options de personnalisation de texte et de style directement
+          dans l'interface Elementor.
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-qualite">Documenter un projet logiciel</span> :
+          rédaction d'une documentation technique pour Clovis (architecture des modules,
+          hooks WordPress utilisés, conventions de nommage, procédure de déploiement)
+          et d'un guide utilisateur pour l'équipe (liste des shortcodes, paramètres des widgets,
+          gestion de la whitelist depuis l'admin WordPress).
+        </p>
+        <p style="margin-top:0.75rem;">
+          <span class="sf sf-archi">Concevoir pour la maintenabilité</span> :
+          le <span class="highlight-point">mode de prévisualisation des shortcodes dans Elementor</span>,
+          actif quel que soit l'état de session ou d'abonnement, évite à Clovis de devoir
+          se connecter avec un compte test à chaque modification de page. L'interface admin
+          de la whitelist lui permet d'ajouter ou retirer des pages publiques sans déploiement.
+        </p>
+      </div>
+    </article>
+
+    <article class="tab-panel bilan-section" data-tab-panel="technique" data-tab-id="bilan" role="tabpanel" hidden>
+      <h2 class="trace-title" style="margin-bottom:1.5rem;">Bilan — Savoir-faire généraux (domaine technique)</h2>
+
+      <div class="bilan-card">
+        <h3>Compétence 1 — Réaliser un développement d'application</h3>
+        <div class="bilan-grid">
+          <div class="bilan-item full">
+            <h4>Contexte d'utilisation des savoir-faire élémentaires</h4>
+            <p>
+              <span class="sf sf-archi">Architecture</span> et <span class="sf sf-dev">back-end</span> mobilisés
+              sur toutes les traces : plugin modulaire (trace 1), webhooks (trace 2), auth (trace 3).
+              <span class="sf sf-qualite">Bonnes pratiques</span> : validation webhook, refactorisation, hooks WP.
+              <span class="sf sf-dev">Composants réutilisables</span> et <span class="sf sf-qualite">documentation</span>
+              (trace 4) : 13 widgets Elementor no-code pour l'équipe, interface admin whitelist, documentation
+              technique pour Clovis et guide utilisateur pour l'équipe non-technique.
+            </p>
+          </div>
+          <div class="bilan-item">
+            <h4>Contexte d'apprentissage</h4>
+            <p>
+              PHP/WordPress : bases vues en cours (S2–S3). Stripe et webhooks : appris en stage
+              avec documentation officielle. Architecture modulaire et widgets Elementor : autonomie
+              + retours Sophie (S8). Documentation technique : premier exercice de rédaction pour
+              une reprise par un tiers (Clovis).
+            </p>
+          </div>
+          <div class="bilan-item">
+            <h4>Difficulté</h4>
+            <p>
+              Modérée à élevée pour Stripe (signature, cas limites). Architecture : difficulté
+              moyenne une fois le besoin de maintenabilité compris. Widgets Elementor : difficulté
+              modérée (API Elementor spécifique). Documentation : faible techniquement, effort de
+              formalisation important pour cibler deux publics différents (développeur / équipe).
+            </p>
+          </div>
+          <div class="bilan-item full">
+            <h4>Avant / après le stage</h4>
+            <div class="avant-apres">
+              <div>
+                <div class="aa-label">Avant</div>
+                <p>Scripts PHP isolés, peu de structuration. Peu d'expérience API tierces en production. Jamais documenté un projet pour une reprise par un tiers.</p>
+              </div>
+              <div>
+                <div class="aa-label">Après</div>
+                <p>Plugin modulaire maintenable, paiement récurrent sécurisé, 13 composants Elementor no-code livrés à l'équipe, documentation technique et guide utilisateur rédigés.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bilan-card">
+        <h3>Compétence 2 — Optimiser des applications informatiques</h3>
+        <div class="bilan-grid">
+          <div class="bilan-item full">
+            <h4>Contexte d'utilisation</h4>
+            <p>
+              <span class="sf sf-qualite">Tests et débogage</span> : correction bug Elementor (chargement infini S5),
+              audit synchronisation Stripe/WP (S4), scénarios d'abonnements (S6).
+            </p>
+          </div>
+          <div class="bilan-item">
+            <h4>Contexte d'apprentissage</h4>
+            <p>Débogage méthodique : cours + SAÉ. En stage : reproduction des bugs en conditions réelles, logs, correction itérative.</p>
+          </div>
+          <div class="bilan-item">
+            <h4>Difficulté</h4>
+            <p>Élevée pour les bugs intermittents (Elementor). Les incohérences Stripe/WP demandaient une lecture croisée des deux systèmes.</p>
+          </div>
+          <div class="bilan-item full">
+            <h4>Avant / après le stage</h4>
+            <div class="avant-apres">
+              <div>
+                <div class="aa-label">Avant</div>
+                <p>Débogage surtout local, peu de production WordPress.</p>
+              </div>
+              <div>
+                <div class="aa-label">Après</div>
+                <p>Audit structuré, tests de scénarios métier, correction sans régression sur un site en ligne.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bilan-card">
+        <h3>Compétence 4 — Gérer des données de l'information</h3>
+        <div class="bilan-grid">
+          <div class="bilan-item full">
+            <h4>Contexte d'utilisation</h4>
+            <p>
+              <span class="sf sf-data">Bases de données</span> : User Meta WordPress (profil chien, abonnement),
+              collecte API partenaires (normalisation, dédoublonnage).
+            </p>
+          </div>
+          <div class="bilan-item">
+            <h4>Contexte d'apprentissage</h4>
+            <p>SQL et modélisation : cours. User Meta et RGPD appliqué : stage + documentation WordPress.</p>
+          </div>
+          <div class="bilan-item">
+            <h4>Difficulté</h4>
+            <p>Faible à modérée pour le schéma profil ; modérée pour la collecte API (formats hétérogènes).</p>
+          </div>
+          <div class="bilan-item full">
+            <h4>Avant / après le stage</h4>
+            <div class="avant-apres">
+              <div>
+                <div class="aa-label">Avant</div>
+                <p>Requêtes SQL classiques, peu de données métier structurées.</p>
+              </div>
+              <div>
+                <div class="aa-label">Après</div>
+                <p>Données exploitables pour le marketing, conformité RGPD de base maîtrisée.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" style="color:var(--text3); text-decoration:none;">← Accueil</a> ·
+  Portfolio BUT · EmmeneTonChien.com · <span id="yr"></span>
+</footer>
+
+<script src="js/tabs.js"></script>
+<script src="js/lightbox.js"></script>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
